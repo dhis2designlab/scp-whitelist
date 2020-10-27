@@ -32,6 +32,8 @@ jobs:
           uname -a
           pwd
           env
+          echo THIS WILL MAKE AN ERROR FOR YOU
+          exit 1
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script

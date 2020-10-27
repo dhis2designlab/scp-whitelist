@@ -36,6 +36,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo MARK-000
+          echo MARK-001
           git diff origin/main -- .gitignore | sed  '/^index/,+2d' | sed -n 's/^+//gp' > added-lines.csv
           cat added-lines.csv

@@ -42,15 +42,4 @@ jobs:
           set -x 
           cat - <<EOF
           ${{ toJson( github.event.pull_request ) }}
-          ---
-          ${{ github.event.pull_request.url }}
-          ---
-          ${{ github.event.pull_request.user.login }}
-          ---
-          ${{ github.event.pull_request.changed_files }}
-          ---
-          ${{ github.event.pull_request.files }}
-          ---
-          ${{ github.event.pull_request.diff_url }}
           EOF
-          curl ${{ github.event.pull_request.diff_url }}

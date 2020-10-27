@@ -44,4 +44,4 @@ jobs:
         run: |
           echo MARK-001
           set -x
-          curl ${{github.event.pull_request.url}}/files
+          curl -H "Accept: application/vnd.github.v3+json" "${{github.event.pull_request.url}}/files"

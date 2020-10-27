@@ -39,7 +39,8 @@ jobs:
       # https://developer.github.com/v3/pulls/
       - name: event info 
         run: |
-          set -x 
           cat - <<EOF
           ${{ toJson( github.event.pull_request ) }}
           EOF
+          set -x 
+          curl -H "Accept: application/vnd.github.v3+json" "${{github.event.pull_request.url}}/files"

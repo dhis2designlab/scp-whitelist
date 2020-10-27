@@ -39,8 +39,16 @@ jobs:
       # https://developer.github.com/v3/pulls/
       - name: event info 
         run: |
+          set -x 
           cat - <<EOF
           ${{ github.event.pull_request.url }}
           ---
           ${{ github.event.pull_request.user.login }}
+          ---
+          ${{ github.event.pull_request.changed_files }}
+          ---
+          ${{ github.event.pull_request.files }}
+          ---
+          ${{ github.event.pull_request.diff_url }}
           EOF
+          curl ${{ github.event.pull_request.diff_url }}

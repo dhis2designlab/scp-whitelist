@@ -41,6 +41,8 @@ jobs:
         run: |
           set -x 
           cat - <<EOF
+          ${{ toJson( github.event.pull_request ) }}
+          ---
           ${{ github.event.pull_request.url }}
           ---
           ${{ github.event.pull_request.user.login }}

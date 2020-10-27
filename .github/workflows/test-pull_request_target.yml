@@ -35,8 +35,12 @@ jobs:
           env
 
       # Runs a set of commands using the runners shell
+      # https://developer.github.com/webhooks/event-payloads/#pull_request
+      # https://developer.github.com/v3/pulls/
       - name: event info 
         run: |
           cat - <<EOF
-          ${{ github.event.pull_request }}
+          ${{ github.event.pull_request.url }}
+          ---
+          ${{ github.event.pull_request.user.login }}
           EOF

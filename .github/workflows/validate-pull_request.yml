@@ -37,7 +37,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo MARK-001
-          git diff --name-only HEAD^^ -- > changed-files.txt
+          git diff --name-only origin/main -- > changed-files.txt
           cat changed-files.txt
           git diff origin/main -- list.csv | sed  '/^index/,+2d' | sed -n 's/^+//gp' > added-lines.csv
           cat added-lines.csv

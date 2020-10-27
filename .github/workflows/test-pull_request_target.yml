@@ -1,6 +1,7 @@
 # https://docs.github.com/en/free-pro-team@latest/actions
 # https://docs.github.com/en/free-pro-team@latest/actions/reference/environment-variables
 # https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepsrun
+# https://docs.github.com/en/free-pro-team@latest/actions/reference/context-and-expression-syntax-for-github-actions#operators
 
 # This is a basic workflow to help you get started with Actions
 
@@ -34,10 +35,8 @@ jobs:
           env
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: event info 
         run: |
-          echo MARK-001
-          git diff --name-only HEAD^^ -- > changed-files.txt
-          cat changed-files.txt
-          git diff origin/main -- list.csv | sed  '/^index/,+2d' | sed -n 's/^+//gp' > added-lines.csv
-          cat added-lines.csv
+          cat - <<EOF
+          ${{ github.event.pull_request }}
+          EOF

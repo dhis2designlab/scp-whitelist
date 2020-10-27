@@ -44,7 +44,7 @@ jobs:
         run: |
           echo MARK-001
           set -x
-          test "$(curl --silent https://api.github.com/repos/dhis2-scp/whitelist/pulls/4/files | jq -r '.[].filename')" == "list.csv" || {
+          test "$(curl --silent "${{github.event.pull_request.url}}/files" | jq -r '.[].filename')" == "list.csv" || {
             echo "ERROR: Changed a file other than list.csv"
             exit 1
           }

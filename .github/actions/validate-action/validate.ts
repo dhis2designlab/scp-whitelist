@@ -16,7 +16,7 @@ const run = async (): Promise<void> => {
     }
 
     console.log(`Checks passed`);
-    //console.log(`The event payload: ${payload}`);
+    console.log(`The event payload: ${payloadJson}`);
   } catch (error) {
     console.error(error.message)
     core.setFailed(`Validate action failure: ${error}`)

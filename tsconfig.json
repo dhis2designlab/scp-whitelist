@@ -12,6 +12,6 @@
       "removeComments": false,
       "preserveConstEnums": true
     },
-    "include": [".github/actions/workflows/validate-action.ts", "**/*.ts"],
+    "include": [".github/workflows/validate-action/*.ts", "**/*.ts"],
     "exclude": ["node_modules"]
   }

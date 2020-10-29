@@ -10,7 +10,7 @@ const run = async (): Promise<void> => {
       core.setFailed(`Validate action failure`);
     }
 
-    if (payload.changed_files !== 1) {
+    if (payload.changed_files != 1) {
       console.error("More than one file has been changed.");
       core.setFailed(`Validate action failure`);
     }

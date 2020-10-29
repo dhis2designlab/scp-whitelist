@@ -1,0 +1,15 @@
+name: Validate workflow
+on:
+  pull_request_target:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: npm install
+      - run: npm run build
+      - uses: ./.github/validate-action
+        

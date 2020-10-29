@@ -1,0 +1,4 @@
+name: "validate-action"
+runs:
+  using: "node12"
+  main: "./validate.js"

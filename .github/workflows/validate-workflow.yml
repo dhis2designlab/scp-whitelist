@@ -16,4 +16,4 @@ jobs:
           cat - > event.json <<EOF
           ${{ toJson( github.event ) }}
           EOF
-          npx -p "https://github.com/haheskja/scp-cli#master" dhis2-scp-cli --help
+          npx -p "https://github.com/haheskja/scp-cli#master" dhis2-scp-cli -vvv pr-verify event.json

@@ -16,5 +16,4 @@ jobs:
           cat - > event.json <<EOF
           ${{ toJson( github.event ) }}
           EOF
-          cat event.json
           npx -p "https://github.com/haheskja/scp-cli#master" dhis2-scp-cli --help

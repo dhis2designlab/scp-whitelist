@@ -1,0 +1,4 @@
+# http://editorconfig.org/#file-format-details
+
+[*]
+insert_final_newline = true

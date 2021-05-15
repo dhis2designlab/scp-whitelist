@@ -1,5 +1,7 @@
 # DHIS2 SCP Whitelist
 
+This documentation is part of Bengtsson, A. (2021). Facilitating Software Reuse. Using Design Science Research To Develop Design Principles For Implementing A Component Repository (Unpublished master's thesis). University of Oslo, Norway.
+
 This repository contains a list of verified NPM packages.
 
 Pull requests to this repository will be validated with a GitHub actions workflow.

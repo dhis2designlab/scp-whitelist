@@ -2,6 +2,8 @@
 
 This documentation is part of Bengtsson, A. (2021). Facilitating Software Reuse. Using Design Science Research To Develop Design Principles For Implementing A Component Repository (Unpublished master's thesis). University of Oslo, Norway.
 
+This documentation is additionally a part of Heskja, H. A. (2021). Enabling software component reuse in enterprise software platform ecosystems (Unpublished master's thesis). University of Oslo, Norway.
+
 This repository contains a list of verified NPM packages.
 
 Pull requests to this repository will be validated with a GitHub actions workflow.
